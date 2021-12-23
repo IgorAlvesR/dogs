@@ -23,14 +23,6 @@ export const UserStorage = ({ children }) => {
     [navigate]
   );
 
-  async function getUser(token) {
-    const { url, options } = USER_GET(token);
-    const response = await fetch(url, options);
-    const json = await response.json();
-    setData(json);
-    setLogin(true);
-  }
-
   async function userLogin(username, password) {
     try {
       setError(null);
@@ -48,6 +40,14 @@ export const UserStorage = ({ children }) => {
     } finally {
       setLoading(false);
     }
+  }
+
+  async function getUser(token) {
+    const { url, options } = USER_GET(token);
+    const response = await fetch(url, options);
+    const json = await response.json();
+    setData(json);
+    setLogin(true);
   }
 
   React.useEffect(() => {

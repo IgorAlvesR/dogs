@@ -1,15 +1,7 @@
 import React from "react";
 import styles from "./Input.module.css";
 
-export const Input = ({
-  label,
-  type,
-  name,
-  onChange,
-  value,
-  error,
-  onBlur,
-}) => {
+const Input = ({ label, type, name, onChange, value, error, onBlur }) => {
   return (
     <div className={styles.wrapper}>
       <label className={styles.label} htmlFor={name}>
@@ -28,3 +20,5 @@ export const Input = ({
     </div>
   );
 };
+
+export default Input;
