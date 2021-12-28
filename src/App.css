@@ -45,6 +45,10 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: #333;
+}
+
 .container {
   max-width: 50rem;
   padding: 0 1rem;
